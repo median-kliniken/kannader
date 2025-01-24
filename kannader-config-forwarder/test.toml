@@ -1,6 +1,0 @@
-[queue]
-path = "/tmp/kannader/queue"
-
-[server]
-cert_path = "/tmp/kannader/cert.pem"
-key_path = "/tmp/kannader/key.pem"

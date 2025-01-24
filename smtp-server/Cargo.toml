@@ -11,11 +11,11 @@ repository = "https://github.com/Ekleog/kannader"
 edition = "2018"
 
 [dependencies]
-async-trait = "0.1.30"
-chrono = "0.4.19"
-duplexify = "1.1"
-futures = { version = "0.3.8", features = ["write-all-vectored"] }
-smol = "1.2"
+async-trait = "0.1.85"
+chrono = "0.4.39"
+duplexify = "1.2"
+futures = { version = "0.3.31", features = ["write-all-vectored"] }
+smol = "1.3"
 
 smtp-message = { path = "../smtp-message", version = "0.1.0" }
 smtp-server-types = { path = "../smtp-server-types", version = "0.1.0" }
