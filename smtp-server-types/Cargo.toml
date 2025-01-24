@@ -8,7 +8,7 @@ keywords = ["smtp", "server", "asynchronous", "email"]
 description = "Types required for configuring the smtp-server crate"
 readme = "../README.md"
 repository = "https://github.com/median-kliniken/kannader"
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }

@@ -8,7 +8,7 @@ keywords = ["parser", "builder", "smtp", "email"]
 description = "Line-oriented parser and builder for SMTP protocol messages"
 readme = "../README.md"
 repository = "https://github.com/median-kliniken/kannader"
-edition = "2018"
+edition = "2021"
 
 [features]
 fuzz-targets = []

@@ -8,7 +8,7 @@ keywords = ["smtp", "server", "asynchronous", "email"]
 description = "Asynchronous SMTP server library"
 readme = "../README.md"
 repository = "https://github.com/median-kliniken/kannader"
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 async-trait = "0.1.85"
