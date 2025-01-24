@@ -7,7 +7,7 @@ categories = ["email", "network-programming"]
 keywords = ["smtp", "server", "asynchronous", "email"]
 description = "Asynchronous SMTP server library"
 readme = "../README.md"
-repository = "https://github.com/median-kliniken/kannader"
+repository = "https://github.com/median-kliniken/smtp-server"
 edition = "2021"
 
 [dependencies]
