@@ -11,7 +11,6 @@ cargo-fuzz = true
 
 [dependencies]
 arbitrary = "1.4"
-futures = "0.3.31"
 libfuzzer-sys = "0.4.8"
 
 smtp-message = { path = "..", features = ["fuzz-targets"] }

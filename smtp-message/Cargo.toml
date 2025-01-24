@@ -27,4 +27,3 @@ regex-automata = { version = "0.1.10" }
 quickcheck = "1.0"
 quickcheck_macros = "1.0"
 itertools = "0.10.5"
-maplit = "1.0"
