@@ -7,7 +7,7 @@ categories = ["email", "network-programming"]
 keywords = ["smtp", "server", "asynchronous", "email"]
 description = "Asynchronous SMTP server library"
 readme = "../README.md"
-repository = "https://github.com/Ekleog/kannader"
+repository = "https://github.com/median-kliniken/kannader"
 edition = "2018"
 
 [dependencies]
@@ -15,10 +15,10 @@ async-trait = "0.1.85"
 chrono = "0.4.39"
 duplexify = "1.2"
 futures = { version = "0.3.31", features = ["write-all-vectored"] }
-smol = "1.3"
+smol = "2.0.2"
 
 smtp-message = { path = "../smtp-message", version = "0.1.0" }
 smtp-server-types = { path = "../smtp-server-types", version = "0.1.0" }
 
 [dev-dependencies]
-piper = "0.1.3"
+piper = "0.2.4"
