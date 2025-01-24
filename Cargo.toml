@@ -1,14 +1,10 @@
 [workspace]
-members = [ "smtp-message", "smtp-message/fuzz",
-            "smtp-client",
-            "smtp-server-types", "smtp-server", "smtp-server/fuzz",
-            "smtp-queue-types", "smtp-queue", "smtp-queue-fs",
-            "kannader-types",
-            "kannader",
-            "kannader-config-macros",
-            "kannader-config",
-            "kannader-config-forwarder",
-            "benches", "tests/integration" ]
+resolver = "2"
+members = [
+    "smtp-message", "smtp-message/fuzz",
+    "smtp-server-types",
+    "smtp-server", "smtp-server/fuzz"
+]
 
 [profile.release]
 lto = true
