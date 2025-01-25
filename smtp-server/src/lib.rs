@@ -4,7 +4,7 @@
 pub mod protocol;
 
 use std::{cmp, io, ops::Range, pin::Pin, sync::Arc};
-
+use std::io::Error;
 use async_trait::async_trait;
 use chrono::Utc;
 use futures::{
@@ -12,6 +12,7 @@ use futures::{
     StreamExt,
 };
 use smol::future::FutureExt;
+use log::trace;
 use smtp_message::{
     next_crlf, nom, Command, Email, EscapedDataReader, Hostname, MaybeUtf8, NextCrLfState, Reply,
 };
@@ -507,7 +508,15 @@ where
         };
     }
 
-    send_reply!(io, cfg.welcome_banner_reply(&mut conn_meta)).await?;
+    match send_reply!(io, cfg.welcome_banner_reply(&mut conn_meta)).await {
+        Ok(_) => {}
+        Err(err) => return if err.kind() == io::ErrorKind::BrokenPipe {
+            trace!("Client closed connection before sending welcome banner - possibly a health probe");
+            Ok(())
+        } else {
+            Err(err)
+        }
+    }
 
     loop {
         if unhandled.is_empty() {
